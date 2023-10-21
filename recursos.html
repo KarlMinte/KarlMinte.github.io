@@ -10,15 +10,27 @@
             padding: 40px; 
             color: white; 
         }
-        h1, h2, h3, a {
+        h1, h2, h3 {
+            display: inline-block;
             margin: 10px 0; 
-            text-decoration: none;
-            color: white; 
             background-color: #003366; 
             padding: 10px 20px; 
             border-radius: 5px; 
             border: 2px solid #00ccff;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        a {
+            text-decoration: none;
+            color: white; 
             transition: 0.3s; 
+            padding: 2px 5px;
+            display: block;
         }
         a:hover {
             background-color: #005588; 
@@ -32,8 +44,10 @@
     <h2>Libros</h2>
     
     <h3>Finanzas</h3>
-    <a href="URL_DEL_LIBRO_1">Nombre de libro 1, autor</a>
-    <a href="URL_DEL_LIBRO_2">Nombre de libro 2, autor</a>
+    <ul>
+        <li><a href="URL_DEL_LIBRO_1">Nombre de libro 1, autor</a></li>
+        <li><a href="URL_DEL_LIBRO_2">Nombre de libro 2, autor</a></li>
+    </ul>
     
     <h3>Economía</h3>
     <!-- Agrega aquí los libros de Economía -->
@@ -60,4 +74,3 @@
 
 </body>
 </html>
-
