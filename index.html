@@ -13,7 +13,7 @@
             padding: 20px;
             text-align: center;
         }
-        .navbar a, h1, p, .photo {
+        .navbar a, h1, p {
             margin: 0 15px;
             text-decoration: none;
             color: white; /* Color de las letras */
@@ -29,27 +29,28 @@
         }
         .content {
             display: flex;
-            align-items: center; /* Centra verticalmente */
+            align-items: stretch; /* Los elementos hijos se estiran para ocupar toda la altura */
             text-align: center;
             margin-top: 20px; /* Espacio superior para separar del menú */
         }
         .photo {
-            width: 150px; /* Ancho de la foto */
-            height: 150px; /* Alto de la foto */
+            flex: 0 0 auto; /* Asegura que la foto no se encoge ni se estira */
             background-image: url('1695763151544.jpeg'); /* Ruta de tu foto */
             background-size: contain; /* Ajusta la imagen para que se ajuste dentro del contenedor */
             background-repeat: no-repeat; /* Evita que la imagen se repita */
             background-position: center; /* Centra la imagen */
             margin-right: 50px; /* Espacio a la derecha de la foto */
+            border: 2px solid #00ccff; /* Contorno celeste */
+            height: 100%; /* Asegura que ocupa toda la altura de su contenedor padre */
         }
     </style>
 </head>
 <body>
     <div class="navbar">
+        <a href="#">Inicio</a>
         <a href="#">Códigos</a>
         <a href="#">Apuntes</a>
         <a href="#">Recursos</a>
-        <a href="#">Links</a>
         <a href="#">Otros</a>
     </div>
     <div class="content">
@@ -61,3 +62,4 @@
     </div>
 </body>
 </html>
+
