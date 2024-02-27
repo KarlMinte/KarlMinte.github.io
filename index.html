@@ -3,46 +3,68 @@
 <head>
     <title>Mi Página Web</title>
     <style>
+        /* Tus estilos actuales */
         body {
             background-image: url('Portada.png');
             background-size: cover;
             font-family: Arial, sans-serif;
-            padding-top: 40px; /* Espacio en la parte superior */
+            padding-top: 40px;
         }
         .navbar {
+            display: flex;
+            justify-content: space-between; /* Alinea elementos a los extremos */
             padding: 20px;
             text-align: center;
         }
-        .navbar a, h1, p {
+        .navbar a, .language-switcher, h1, p {
             margin: 0 15px;
             text-decoration: none;
-            color: white; /* Color de las letras */
-            background-color: #003366; /* Color azul oscuro neón */
-            padding: 10px 20px; /* Espaciado interno */
-            border-radius: 5px; /* Bordes redondeados */
-            border: 2px solid #00ccff; /* Contorno celeste */
-            transition: 0.3s; /* Efecto suave al pasar el mouse */
+            color: white;
+            background-color: #003366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid #00ccff;
+            transition: 0.3s;
         }
-        .navbar a:hover, h1:hover, p:hover {
-            background-color: #005588; /* Cambio de color al pasar el mouse */
-            border-color: #00e5ff; /* Cambio de color del contorno al pasar el mouse */
+        .navbar a:hover, .language-switcher:hover, h1:hover, p:hover {
+            background-color: #005588;
+            border-color: #00e5ff;
         }
-        .content {
-            text-align: center;
-            margin-top: 20px; /* Espacio superior para separar del menú */
+        .language-switcher {
+            cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="codigos.html">Códigos</a>
-        <a href="apuntes.html">Apuntes</a>
-        <a href="recursos.html">Recursos</a>
-        <a href="otros.html">Otros</a>
+        <div>
+            <a href="codigos.html">Códigos</a>
+            <a href="apuntes.html">Apuntes</a>
+            <a href="recursos.html">Recursos</a>
+            <a href="otros.html">Otros</a>
+        </div>
+        <div class="language-switcher" id="language-switcher" onclick="switchLanguage()">ES | EN</div>
     </div>
     <div class="content">
-        <h1>Bienvenido a mi página</h1>
-        <p>Mi nombre es Karl Vidal, soy titulado de Ingeniería Comercial con licenciatura en Ciencias Económicas de la Universidad de Chile, actualmente en proceso de Tesis del Magíster en Finanzas en la misma casa de estudios. Amplia experiencia en la asistencia de cátedras cuantitativas, incluyendo Econometría, Cálculo, Álgebra y Machine Learning. Destacada habilidad en el análisis de datos, estimación, pronóstico y análisis inferencial causal. Enfocado en proporcionar soluciones prácticas a problemas complejos a través de herramientas teóricas y cuantitativas. Orientado a áreas de interés como la Econometría, las Finanzas Cuantitativas, la Estadística Aplicada y el Machine Learning.</p>
+        <h1 id="welcome-title">Bienvenido a mi página</h1>
+        <p id="intro-text">Mi nombre es Karl Vidal, soy titulado de Ingeniería Comercial con licenciatura en Ciencias Económicas de la Universidad de Chile, actualmente en proceso de Tesis del Magíster en Finanzas en la misma casa de estudios. Amplia experiencia en la asistencia de cátedras cuantitativas, incluyendo Econometría, Cálculo, Álgebra y Machine Learning. Destacada habilidad en el análisis de datos, estimación, pronóstico y análisis inferencial causal. Enfocado en proporcionar soluciones prácticas a problemas complejos a través de herramientas teóricas y cuantitativas. Orientado a áreas de interés como la Econometría, las Finanzas Cuantitativas, la Estadística Aplicada y el Machine Learning.</p>
     </div>
+    <script>
+        var currentLanguage = 'ES'; // Idioma por defecto
+        function switchLanguage() {
+            if (currentLanguage === 'ES') {
+                // Cambia el contenido a Inglés
+                document.getElementById('welcome-title').textContent = 'Welcome to my page';
+                document.getElementById('intro-text').textContent = 'My name is Karl Vidal, I am a graduate of Commercial Engineering with a degree in Economics from the University of Chile, currently in the process of a Master's Thesis in Finance at the same university. Extensive experience in assisting quantitative courses, including Econometrics, Calculus, Algebra and Machine Learning. Outstanding skills in data analysis, estimation, forecasting and causal inferential analysis. Focused on providing practical solutions to complex problems through theoretical and quantitative tools. Oriented to areas of interest such as Econometrics, Quantitative Finance, Applied Statistics and Machine Learning.';
+                currentLanguage = 'EN';
+            } else {
+                // Cambia el contenido a Español
+                document.getElementById('welcome-title').textContent = 'Bienvenido a mi página';
+                document.getElementById('intro-text').textContent = 'Mi nombre es Karl Vidal, soy titulado de Ingeniería Comercial con licenciatura en Ciencias Económicas de la Universidad de Chile, actualmente en proceso de Tesis del Magíster en Finanzas en la misma casa de estudios. Amplia experiencia en la asistencia de cátedras cuantitativas, incluyendo Econometría, Cálculo, Álgebra y Machine Learning. Destacada habilidad en el análisis de datos, estimación, pronóstico y análisis inferencial causal. Enfocado en proporcionar soluciones prácticas a problemas complejos a través de herramientas teóricas y cuantitativas. Orientado a áreas de interés como la Econometría, las Finanzas Cuantitativas, la Estadística Aplicada y el Machine Learning.';
+                currentLanguage = 'ES';
+            }
+        }
+    </script>
 </body>
 </html>
+
